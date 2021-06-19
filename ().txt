@@ -1,0 +1,22 @@
+while(1):
+  k=input()
+  s=list()
+  a=0
+
+  for i in range(0,len(k)):
+    if k[i]=='(':
+      s.append('(')
+  
+  b=len(s)
+
+  for i in range(0,len(k)):
+    if k[i]==')':
+      a+=1
+      if '(' in s:
+        s.pop()
+      else:
+        break
+  if s==[] and a==b:
+    print('Yes')  
+  else:
+    print('No')  
